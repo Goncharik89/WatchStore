@@ -21,6 +21,11 @@ app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 3000;
 
+const orderRouts = require('./routes/order');
+
+app.use('/order', orderRouts);
+
+
 app.listen(PORT, async () => {
   try {
     await sequelize.authenticate(app);
