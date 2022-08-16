@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Watch, {
         foreignKey: 'id',
       });
-      // this.belongsTo(models.User, {
-      //   foreignKey: 'id',
-      // });
+      this.belongsTo(models.User, {
+        foreignKey: 'id',
+      });
     }
   }
   Order.init({

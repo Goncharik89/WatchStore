@@ -11,16 +11,16 @@ module.exports = {
       watch_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Watch',
+          model: 'Watches',
           key: 'id',
         },
       },
       user_id: {
         type: Sequelize.INTEGER,
-        // references: {
-        //   model: 'User',
-        //   key: 'id',
-        // },
+        references: {
+          model: 'Users',
+          key: 'id',
+        },
       },
       name: {
         type: Sequelize.STRING

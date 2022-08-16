@@ -5,6 +5,8 @@ const { formOrder, newOrder } = require('../controllers/orderController');
 const { isAuth } = require('../middleware/index');
 
 router
-  .route('/order')
+  .route('/')
   .get(formOrder)
   .post(isAuth, newOrder);
+
+module.exports = router;

@@ -15,6 +15,7 @@ const { sequelize } = require('./db/models');
 // const Dog = require('../views/Dog');
 const regRoutes = require('./routes/regRoutes');
 const logRoutes = require('./routes/logRoutes');
+const orderRouts = require('./routes/order');
 
 const app = express();
 
@@ -41,9 +42,6 @@ const sessionConfig = {
 app.use(session(sessionConfig));
 app.use('/register', regRoutes);
 app.use('/login', logRoutes);
-
-const orderRouts = require('./routes/order');
-
 app.use('/order', orderRouts);
 
 
