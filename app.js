@@ -3,6 +3,8 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
+const session = require('express-session');
+const FileStore = require('session-file-store')(session);
 
 const { sequelize } = require('./db/models');
 // const renderTemplate = require('../lib/renderTemplate');
@@ -11,6 +13,8 @@ const { sequelize } = require('./db/models');
 // const Form = require('../views/Form');
 // const Tasks = require('../views/Tasks');
 // const Dog = require('../views/Dog');
+const regRoutes = require('./routes/regRoutes');
+const logRoutes = require('./routes/logRoutes');
 
 const app = express();
 
@@ -19,7 +23,24 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3000;
+const { PORT, SESSION_SECRET } = process.env;
+
+// * 6 Создание конфига для куки
+const sessionConfig = {
+  name: 'AuthCookie', // * Название куки
+  store: new FileStore(), // * подключение стора (БД для куки) для хранения
+  secret: SESSION_SECRET, // * ключ для шифрования куки
+  resave: false, // * если true, пересохраняет сессию, даже если она не поменялась
+  saveUninitialized: false, // * Если false, куки появляются только при установке req.session
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 10, // * время жизни в ms (10 дней)
+    httpOnly: true, // * куки только по http
+  },
+};
+  // * 7 подключение мидлвара для куки
+app.use(session(sessionConfig));
+app.use('/register', regRoutes);
+app.use('/login', logRoutes);
 
 app.listen(PORT, async () => {
   try {
