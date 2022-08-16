@@ -22,7 +22,8 @@ const loginUser = async (req, res) => {
     const passCheck = await bcrypt.compare(password, user.password);
     if (passCheck) {
       // * 27 если пароль верный, создаём сессию
-      req.session.newUser = user.email;
+      req.session.newUserEmail = user.email;
+      req.session.newUserName = user.name;
       req.session.save(() => {
         res.redirect('/');
       });
