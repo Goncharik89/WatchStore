@@ -30,9 +30,11 @@ module.exports = function Layout({ children }) {
         <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Scirocco</a>
 
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#about" className="nav-link px-2 link-dark headerLi">О нас</a></li>
-          <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
-          <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li>
+          <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
+          <li><a href="#catalog" className="nav-link px-2 link-dark headerLi">Каталог</a></li>
+          <li><a href="#order" className="nav-link px-2 link-dark headerLi">Заказать</a></li>
+          {/* <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
+          <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li> */}
         </ul>
         <div className="col-md-3 text-end enterReg">
           <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
