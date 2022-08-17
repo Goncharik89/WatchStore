@@ -79,6 +79,41 @@ module.exports = function Layout({ children }) {
               </div>
             </div>
           </div>
+        </header>
+      </div>
+      <footer>
+        <section className="footer">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4 col-6">
+                <h4>Информация</h4>
+                <ul className="list-unstyled">
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Условия</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+
+              <div className="col-md-4 col-6">
+                <h4>Контакты</h4>
+                <ul className="list-unstyled">
+                  <li> Тел. +7 (999)-777-77-77</li>
+                  <li> Тел. +7 (495)-555-55-55</li>
+                  <li>Email. watch@mail.ru</li>
+                </ul>
+              </div>
+              <div className="col-md-4 col-6">
+                <h4>Мы в сети</h4>
+                <ul className="sb circle gray text">
+                  <li><a href="#" className="twitter">Twitter</a></li>
+                  <li><a href="#" className="Telegram">Telegram</a></li>
+                  <li><a href="#" className="facebook">Facebook</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
         </div>
       </header>
       <body>
