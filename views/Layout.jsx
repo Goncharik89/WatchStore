@@ -64,7 +64,7 @@ module.exports = function Layout({ children }) {
                   <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                 </div>
                 <div className="modal-body">
-                  <form action="/register" method="POST" id="loginForm">
+                  <form action="/register" method="POST" id="registerForm">
                     <label htmlFor="exampleInput1" className="form-label">Имя</label>
                     <input name="name" type="text" className="form-control" />
                     <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>

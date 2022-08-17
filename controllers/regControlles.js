@@ -12,7 +12,7 @@ const renderRegister = (req, res) => {
 
 const regUser = async (req, res) => {
   const { name, email, password } = req.body;
-  console.log('-----------------------------', name, email, password);
+  // console.log('-----------------------------', name, email, password);
   try {
     // ! 16 Хеширование паролей, чтобы они не записывались в первозданном виде в бд
     // * 18 делаем новую переменную с хешированным паролем
@@ -29,10 +29,10 @@ const regUser = async (req, res) => {
     // * 15 обработка ошибки в консоли
     // ! Если не написать, то redirect может происходить раньше, чем записаь файла в session
     req.session.save(() => {
-      res.redirect('/');
+      res.json({ isRegSuccessful: true });
     });
   } catch (error) {
-    res.send(`Error ------> ${error}`);
+    res.json({ isRegSuccessful: false });
   }
 };
 
