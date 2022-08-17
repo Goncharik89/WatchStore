@@ -19,8 +19,10 @@ module.exports = function Layout({ children }) {
           integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="styles/main.css" />
-        <script defer src="js/application.js" />
+        <link rel="stylesheet" href="/styles/main.css" />
+        <link rel="stylesheet" href="/styles/carousel.css" />
+        <link rel="stylesheet" href="/styles/heroes.css" />
+        <script defer src="/js/application.js" />
       </head>
       <body>
         { children }
