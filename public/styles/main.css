@@ -1,27 +1,45 @@
 /* СТИЛИ ПЕРВОГО СЛАЙДА, ЕГО КНОПКИ, НАДПИСИ */
 
 .artBtn {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  background-color: #FF909D;
-  border-color: #FF909D;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    background-color: #FF909D;
+    border-color: #FF909D;
+  }
+  
+  .artBtn:hover {
+    background-color: #FF6879;
+    border-color: #FF6879;
+  }
+  
+  p {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .articleH1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+
+.style{
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
 }
 
-.artBtn:hover {
-  background-color: #FF6879;
-  border-color: #FF6879;
+.styleT{
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
-p {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.articleH1 {
-  display: flex;
-  justify-content: flex-start;
-}
 
 /* СТИЛИ ХЭДЭРА */
 
@@ -77,5 +95,12 @@ p {
 .regBtn:hover {
   background-color: #FF6879;
   border-color: #FF6879;
+}
+
+=======
+.row{
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 

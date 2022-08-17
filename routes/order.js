@@ -4,7 +4,7 @@ const multer = require('multer');
 
 const { formOrder, newOrder } = require('../controllers/orderController');
 
-const { isAuth } = require('../middleware/index');
+// const { isAuth } = require('../middleware/index');
 
 const storageConfig = multer.diskStorage({ // создаем конфиг multer
   destination: (req, file, cb) => {

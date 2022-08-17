@@ -1,20 +1,19 @@
 const renderTemplate = require('../lib/renderTemplate');
 const OrderJSX = require('../views/Order');
 
-const { Watch, User, Order } = require('../db/models');
+const { User, Order } = require('../db/models');
 
-exports.formOrder = (req, res) => {
+exports.formOrder = async (req, res) => {
   const name = req.session?.newUserName;
   renderTemplate(OrderJSX, { username: name }, res);
 };
 
 exports.newOrder = async (req, res) => { // multer создает req.file
   try {
-    // const findWatch = await Watch.findOne({ where: { id: req.session.watch.id } });
-    // const findUser = await User.findOne({ where: { id: req.session.newUser.id } }); // ищем юзера
+    const findUser = await User.findOne({ where: { id: req.session.newUser.id } }); // ищем юзера
     await Order.create({
       // watch_id: findWatch.id,
-      // user_id: findUser.id,
+      user_id: findUser.id,
       name: req.body.name,
       email: req.body.email,
       phone: req.body.phone,
@@ -25,7 +24,7 @@ exports.newOrder = async (req, res) => { // multer создает req.file
       plain: true, // хз
     });
 
-    res.redirect('/'); // редирект на созданную карточку
+    res.redirect('/');
   } catch (error) {
     res.send(error.message);
   }
