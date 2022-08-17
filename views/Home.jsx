@@ -9,7 +9,6 @@ const Article = require('./Article');
 module.exports = function Home({ newUser }) {
   return (
     <Layout newUser={newUser}>
-      <h1>HEADER WILL BE HERE</h1>
       <Article />
       <About />
       <Catalog />
