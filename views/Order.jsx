@@ -4,9 +4,47 @@ const Layout = require('./Layout');
 function Order({ username }) {
   return (
     <Layout username={username}>
-      <div>
+      <div className="container">
+        <div className="row justify-content-around">
         <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data">
-          <label htmlFor="title-input" className="block mar-b-1 inputForm">Имя:</label>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Имя</label>
+            <input type="text" name="name" className="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" />
+            <div id="emailHelp" className="form-text">Укажите полность Ф.И.О</div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
+            <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            <div id="emailHelp" className="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
+            <input type="text" name="phone" className="form-control" id="exampleInputEmail1" aria-describedby="phoneHelp" />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
+            <input type="text" name="description" className="form-control" id="exampleInputDescription1" />
+          </div>
+          <div>
+          <input className="buttonStyle" type="file" name="photo" />
+          </div>
+          {/* <div className="mb-3 form-check">
+          <input type="checkbox" className="form-check-input" id="exampleCheck1">
+          <label className="form-check-label" for="exampleCheck1">Проверить меня</label>
+        </div> */}
+          <button type="submit" className="btn btn-primary">Отправить</button>
+        </form>
+        </div>
+      </div>
+    </Layout>
+  );
+}
+
+module.exports = Order;
+
+{ /* <input className="buttonStyle" type="file" name="photo" /> */ }
+
+{ /* <label htmlFor="title-input" className="block mar-b-1 inputForm">Имя:</label>
           <input
             id="title-input"
             name="name"
@@ -46,11 +84,4 @@ function Order({ username }) {
             value="Отправить"
             tabIndex="3"
             className="block button w-10 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline inputText"
-          />
-        </form>
-      </div>
-    </Layout>
-  );
-}
-
-module.exports = Order;
+          /> */ }
