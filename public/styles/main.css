@@ -22,7 +22,7 @@
   }
   
 
-.style{
+/* .style{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
@@ -36,10 +36,26 @@
     align-content: flex-start;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .row{
   justify-content: space-between;
   align-items: center;
   align-content: center;
+}
+
+.modal-sheet .modal-dialog {
+  width: 380px;
+  transition: bottom .75s ease-in-out;
+}
+.modal-sheet .modal-footer {
+  padding-bottom: 2rem;
+}
+
+.modal-alert .modal-dialog {
+  width: 380px;
+}
+
+.modal-tour .modal-dialog {
+  width: 380px;
 }
