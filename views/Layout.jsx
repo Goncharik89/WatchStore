@@ -7,6 +7,7 @@ module.exports = function Layout({ children }) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/img/fav.png" type="image/png" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -21,6 +22,7 @@ module.exports = function Layout({ children }) {
         />
         <link rel="stylesheet" href="/styles/carousel.css" />
         <link rel="stylesheet" href="/styles/heroes.css" />
+        <link rel="stylesheet" href="/styles/features.css" />
         <link rel="stylesheet" href="/styles/main.css" />
         <script defer src="/js/application.js" />
       </head>
