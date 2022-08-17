@@ -19,7 +19,7 @@ module.exports = function Catalog() {
               <div className="carousel-caption text-start">
                 <h1>Aquaracer</h1>
                 <p>Модель обладает компактными размерами и профессиональным качеством</p>
-                <p><a className="btn btn-lg btn-primary" href="#">Заказать</a></p>
+                <p><a className="btn btn-lg btn-primary" href="#order">Заказать</a></p>
               </div>
             </div>
           </div>
@@ -30,7 +30,7 @@ module.exports = function Catalog() {
               <div className="carousel-caption text-start">
                 <h1>Tango</h1>
                 <p>Воплощает в себе страсть, которую мы вкладываем в создание часов</p>
-                <p><a className="btn btn-lg btn-primary" href="#">Заказать</a></p>
+                <p><a className="btn btn-lg btn-primary" href="#order">Заказать</a></p>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ module.exports = function Catalog() {
               <div className="carousel-caption text-start">
                 <h1>Toccata</h1>
                 <p>Изысканный дизайн и неподвластные времени материалы</p>
-                <p><a className="btn btn-lg btn-primary" href="#">Заказать</a></p>
+                <p><a className="btn btn-lg btn-primary" href="#order">Заказать</a></p>
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ module.exports = function Catalog() {
               <div className="carousel-caption text-start">
                 <h1>Maestro</h1>
                 <p>Maestro - это элегантная и утонченная модель механических часов</p>
-                <p><a className="btn btn-lg btn-primary" href="#">Заказать</a></p>
+                <p><a className="btn btn-lg btn-primary" href="#order">Заказать</a></p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ module.exports = function Catalog() {
               <div className="carousel-caption text-start">
                 <h1>Time</h1>
                 <p>Впечатлит людей, на которых время не влияет</p>
-                <p><a className="btn btn-lg btn-primary" href="#">Заказать</a></p>
+                <p><a className="btn btn-lg btn-primary" href="#order">Заказать</a></p>
               </div>
             </div>
           </div>
