@@ -24,7 +24,7 @@
   }
   
 
-.style{
+/* .style{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
@@ -38,7 +38,7 @@
     align-content: flex-start;
     justify-content: center;
     align-items: center;
-}
+} */
 
 
 /* СТИЛИ ХЭДЭРА */
@@ -59,6 +59,7 @@
 .headerLi:hover {
   color: #FF6879 !important;
 }
+
 
 /* СТИЛИ ЛОГО */
 
@@ -97,10 +98,76 @@
   border-color: #FF6879;
 }
 
-=======
-.row{
+
+/* СТИЛИ ФОРМЫ ОТПРАВКИ ЗАЯВКИ */
+
+/* .row{
   justify-content: space-between;
   align-items: center;
   align-content: center;
+} */
+
+.orderForm {
+  display: flex !important;
+  flex-direction: column !important;
+  /* margin: 0 !important; */
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center
+}
+
+.requestForm{
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center
+}
+
+.orderFormBlock {
+  height: 600px !important;
+  width: 600px !important;
+  background-color: #75C9CC !important;
+  border-color: #75C9CC !important;
+  border-radius: 20px;
+}
+
+.nameInput, .emailInput, .telephoneInput, .orderHeigth {
+  width: 500px;
+  margin-bottom: 30px !important;
+  border-radius: 8px;
+}
+
+.orderHeigth {
+  min-height: 80px;
+}
+
+.chooseFile {
+  width: 500px;
+  margin-bottom: 30px !important;
+}
+
+.sendMessage {
+  width: 300px;
+  margin-bottom: 30px !important;
+  background-color: #FF909D;
+  border-color: #FF909D;
+}
+
+.sendMessage:hover {
+  background-color: #FF6879;
+  border-color: #FF6879;
+}
+
+.nameLabel {
+  margin-top: 20px;
+}
+
+.form-label {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+
 }
 

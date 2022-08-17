@@ -3,60 +3,42 @@ const Layout = require('./Layout');
 
 function Order({}) {
   return (
-    <div>
-      <div className="container">
+    <div className="container orderForm">
 
-        <div className="justify-content-around">
-          <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data">
+      <div className="orderFormBlock">
 
-            <div className="row">
+        <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="requestForm">
 
-              <div className='col-4'>
-              <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">Имя</label>
-                <input type="text" name="name" className="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" />
-                <div id="emailHelp" className="form-text">Укажите полность Ф.И.О</div>
-              </div>
-              </div>
+          <div className="col-44">
+            <label htmlFor="exampleInputEmail1" className="form-label nameLabel">Имя</label>
+            <input type="text" name="name" className="form-control nameInput" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Укажите полность Ваши Ф.И.О" />
+          </div>
 
-              <div className='col-4'>
-              <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
-                <input type="text" name="phone" className="form-control" id="exampleInputEmail1" aria-describedby="phoneHelp" />
-              </div>
-              </div>
+          <div className="mb-33">
+            <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
+            <input type="email" name="email" className="form-control emailInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Мы не передаем Вашу электронную почту третьим лицам" />
+          </div>
 
-            </div>
+          <div className="col-44">
+            <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
+            <input type="text" name="phone" className="form-control telephoneInput" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="Укажите Ваш номер телефона" />
+          </div>
 
-            <div className="row">
+          <div className="mb-33">
+            <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
+            <input type="text" name="description" className="form-control h-40 orderHeigth" id="exampleInputDescription1" placeholder="Подробно опишите Ваши пожелания к заказу" />
+          </div>
 
-            <div className='col-4'>
-              <div className="mb-3">
-                <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
-                <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                <div id="emailHelp" className="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
-              </div>
-              </div>
-              
-              <div className='col-4'>
-              <input className="buttonStyle" type="file" name="photo" />
-              </div>
-            </div>
+          <div className="uploadPhoto">
+            <input className="buttonStyle chooseFile" type="file" name="photo" />
+          </div>
 
-            <div className="row">
+          <button type="submit" className="btn btn-primary sendMessage">Отправить</button>
 
-              <div className="mb-3">
-                <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
-                <input type="text" name="description" className="form-control h-40" id="exampleInputDescription1" />
-              </div>
+        </form>
 
-            </div>
-
-            <button type="submit" className="btn btn-primary">Отправить</button>
-          </form>
-
-        </div>
       </div>
+
     </div>
 
   );
