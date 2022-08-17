@@ -1,3 +1,27 @@
+.artBtn {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    background-color: #FF909D;
+    border-color: #FF909D;
+  }
+  
+  .artBtn:hover {
+    background-color: #FF6879;
+    border-color: #FF6879;
+  }
+  
+  p {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .articleH1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+
 /* .style{
     flex-direction: column;
     flex-wrap: wrap;

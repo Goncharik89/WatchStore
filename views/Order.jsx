@@ -3,7 +3,7 @@ const Layout = require('./Layout');
 
 function Order({ order, username }) {
   return (
-    <Layout username={username}>
+    <div>
       <div className="container d-flex style">
 
         <div className="justify-content-around">
@@ -39,7 +39,7 @@ function Order({ order, username }) {
 
         </div>
       </div>
-    </Layout>
+    <div>
   );
 }
 
