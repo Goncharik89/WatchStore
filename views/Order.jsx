@@ -1,55 +1,51 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Order({ username }) {
+function Order({}) {
   return (
-    <Layout username={username}>
-      <div>
-        <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data">
-          <label htmlFor="title-input" className="block mar-b-1 inputForm">Имя:</label>
-          <input
-            id="title-input"
-            name="name"
-            type="text"
-            tabIndex="1"
-            className="block w-10 no-outline no-border pad-1 mar-b-2 inputForm"
-          />
-          <label htmlFor="body-textarea" className="block mar-b-1 inputForm">Email:</label>
-          <textarea
-            id="body-textarea"
-            name="email"
-            type="mail"
-            tabIndex="2"
-            className="block w-10 no-resize no-outline no-border no-resize pad-1 mar-b-2 inputForm"
-          />
-          <label htmlFor="body-textarea" className="block mar-b-1 inputForm">Телефон:</label>
-          <input
-            id="title-input"
-            name="phone"
-            type="text"
-              // value={entry.title}
-            tabIndex="1"
-            className="block w-10 no-outline no-border pad-1 mar-b-2 inputForm"
-          />
-          <label htmlFor="body-textarea" className="block mar-b-1 inputForm">Описание:</label>
-          <input
-            id="title-input"
-            name="description"
-            type="text"
-              // value={entry.title}
-            tabIndex="1"
-            className="block w-10 no-outline no-border pad-1 mar-b-2 inputText"
-          />
-          <input className="buttonStyle" type="file" name="photo" />
-          <input
-            type="submit"
-            value="Отправить"
-            tabIndex="3"
-            className="block button w-10 mar-t-4 mar-b-3 pad-2 round-1 text-c center no-border no-outline inputText"
-          />
+
+    <div className="container orderForm">
+
+    <div id="order">
+      <div className="container">
+
+
+      <div className="orderFormBlock">
+
+        <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="requestForm">
+
+          <div className="col-44">
+            <label htmlFor="exampleInputEmail1" className="form-label nameLabel">Имя</label>
+            <input type="text" name="name" className="form-control nameInput" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Укажите полность Ваши Ф.И.О" />
+          </div>
+
+          <div className="mb-33">
+            <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
+            <input type="email" name="email" className="form-control emailInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Мы не передаем Вашу электронную почту третьим лицам" />
+          </div>
+
+          <div className="col-44">
+            <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
+            <input type="text" name="phone" className="form-control telephoneInput" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="Укажите Ваш номер телефона" />
+          </div>
+
+          <div className="mb-33">
+            <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
+            <input type="text" name="description" className="form-control h-40 orderHeigth" id="exampleInputDescription1" placeholder="Подробно опишите Ваши пожелания к заказу" />
+          </div>
+
+          <div className="uploadPhoto">
+            <input className="buttonStyle chooseFile" type="file" name="photo" />
+          </div>
+
+          <button type="submit" className="btn btn-primary sendMessage">Отправить</button>
+
         </form>
+
       </div>
-    </Layout>
+
+    </div>
+
   );
 }
 
