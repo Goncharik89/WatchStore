@@ -4,10 +4,10 @@ const { Watch } = require('../db/models/watch');
 
 const renderHome = async (req, res) => {
   try {
-    const watch = await Watch.findAll();
-    console.log(watch);
+    // const watch = await Watch.findAll();
+    // console.log(watch);
     const newUser = req.session?.newUser;
-    renderTemplate(Home, { newUser, watch }, res);
+    renderTemplate(Home, { newUser }, res);
   } catch (error) {
     res.status(500).json({ errorMessage: error.message });
   }
