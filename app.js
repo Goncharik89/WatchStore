@@ -13,6 +13,7 @@ const { sequelize } = require('./db/models');
 // const Form = require('../views/Form');
 // const Tasks = require('../views/Tasks');
 // const Dog = require('../views/Dog');
+const homeRouter = require('./routes/homeRouter');
 const regRoutes = require('./routes/regRoutes');
 const logRoutes = require('./routes/logRoutes');
 const orderRouts = require('./routes/order');
@@ -40,10 +41,10 @@ const sessionConfig = {
 };
   // * 7 подключение мидлвара для куки
 app.use(session(sessionConfig));
+app.use('/', homeRouter);
 app.use('/register', regRoutes);
 app.use('/login', logRoutes);
 app.use('/order', orderRouts);
-
 
 app.listen(PORT, async () => {
   try {
