@@ -1,39 +1,42 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function Order({ username }) {
+function Order({ order, username }) {
   return (
     <Layout username={username}>
-      <div className="container">
-        <div className="row justify-content-around">
-        <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data">
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Имя</label>
-            <input type="text" name="name" className="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" />
-            <div id="emailHelp" className="form-text">Укажите полность Ф.И.О</div>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
-            <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-            <div id="emailHelp" className="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
-            <input type="text" name="phone" className="form-control" id="exampleInputEmail1" aria-describedby="phoneHelp" />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
-            <input type="text" name="description" className="form-control" id="exampleInputDescription1" />
-          </div>
-          <div>
-          <input className="buttonStyle" type="file" name="photo" />
-          </div>
-          {/* <div className="mb-3 form-check">
-          <input type="checkbox" className="form-check-input" id="exampleCheck1">
-          <label className="form-check-label" for="exampleCheck1">Проверить меня</label>
-        </div> */}
-          <button type="submit" className="btn btn-primary">Отправить</button>
-        </form>
+      <div className="container d-flex style">
+
+        <div className="justify-content-around">
+          <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data">
+            <div className="row styleT">
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">Имя</label>
+                <input type="text" name="name" className="form-control" id="exampleInputEmail1" aria-describedby="nameHelp" />
+                <div id="emailHelp" className="form-text">Укажите полность Ф.И.О</div>
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
+                <input type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                <div id="emailHelp" className="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
+                <input type="text" name="phone" className="form-control" id="exampleInputEmail1" aria-describedby="phoneHelp" />
+              </div>
+              <input className="buttonStyle" type="file" name="photo" />
+            </div>
+            <div className="row">
+              <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
+                <input type="text" name="description" className="form-control" id="exampleInputDescription1" />
+              </div>
+            </div>
+
+            <button type="submit" className="btn btn-primary">Отправить</button>
+          </form>
+
         </div>
       </div>
     </Layout>

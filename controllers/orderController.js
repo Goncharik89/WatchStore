@@ -3,7 +3,7 @@ const OrderJSX = require('../views/Order');
 
 const { Watch, User, Order } = require('../db/models');
 
-exports.formOrder = (req, res) => {
+exports.formOrder = async (req, res) => {
   const name = req.session?.newUserName;
   renderTemplate(OrderJSX, { username: name }, res);
 };
