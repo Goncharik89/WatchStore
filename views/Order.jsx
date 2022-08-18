@@ -45,7 +45,7 @@ function Order({ userId }) {
 
                 <div className="col-44">
                   <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
-                  <input type="text" name="phone" className="form-control telephoneInput" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="Укажите Ваш номер телефона" />
+                  <input type="text" name="phone" className="form-control telephoneInput" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="+*(***)***-**-**" />
                 </div>
 
                 <div className="mb-33">

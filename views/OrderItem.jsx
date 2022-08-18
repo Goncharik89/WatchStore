@@ -9,7 +9,7 @@ module.exports = function OrderItem({ order }) {
       <td>{order.email}</td>
       <td>{order.phone}</td>
       <td>{order.description}</td>
-      <td>{order.pic}</td>
+      <td><img src={`/images/${order.pic}`} alt="pic" style={{ width: 300 }} /></td>
 
     </tr>
   );
