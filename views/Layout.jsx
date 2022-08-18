@@ -34,6 +34,7 @@ module.exports = function Layout({ children, newUser }) {
           <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
           <li><a href="#catalog" className="nav-link px-2 link-dark headerLi">Каталог</a></li>
           <li><a href="#order" className="nav-link px-2 link-dark headerLi">Заказать</a></li>
+          <li><a href="/orders" className="nav-link px-2 link-dark headerLi">Заказы</a></li>
           {/* <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
           <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li> */}
         </ul>

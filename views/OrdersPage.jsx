@@ -8,7 +8,7 @@ module.exports = function OrdersPage({ orders }) {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" />
       <script src="/js/table2csv.min.js" />
       <script src="/js/tabletocsv.js" defer />
-      <h1>Заказы:</h1>
+      <h1 className="catalogTitle">Заказы:</h1>
       <div>
         <table id="table" className="table">
           <thead>
