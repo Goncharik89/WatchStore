@@ -2,8 +2,9 @@ const React = require('react');
 
 function Order({}) {
   return (
+
     <>
-     
+
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -12,7 +13,7 @@ function Order({}) {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" />
             </div>
             <div className="modal-body">
-             Ваш заказ принят, на вашу почту отправлено письмо
+              Ваш заказ принят, на вашу почту отправлено письмо
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
@@ -22,57 +23,42 @@ function Order({}) {
         </div>
       </div>
 
-      <div id="order">
-        <div className="container">
+      <div className="container orderForm">
 
-          <div className="justify-content-around">
-            <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="order">
+        <div id="order">
+          <div className="container">
 
-              <div className="row">
+            <div className="orderFormBlock">
 
-                <div className="col-4">
-                  <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Имя</label>
-                    <input type="text" name="name" className="form-control Name" id="exampleInputEmail1" aria-describedby="nameHelp" />
-                    <div id="emailHelp" className="form-text">Укажите полность Ф.И.О</div>
-                  </div>
+              <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="requestForm">
+
+                <div className="col-44">
+                  <label htmlFor="exampleInputEmail1" className="form-label nameLabel">Имя</label>
+                  <input type="text" name="name" className="form-control nameInput" id="exampleInputEmail1" aria-describedby="nameHelp" placeholder="Укажите полность Ваши Ф.И.О" />
                 </div>
 
-                <div className="col-4">
-                  <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
-                    <input type="text" name="phone" className="form-control Phone" id="exampleInputEmail1" aria-describedby="phoneHelp" />
-                  </div>
+                <div className="mb-33">
+                  <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
+                  <input type="email" name="email" className="form-control emailInput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Мы не передаем Вашу электронную почту третьим лицам" />
                 </div>
 
-              </div>
-
-              <div className="row">
-
-                <div className="col-4">
-                  <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Адрес электронной почты</label>
-                    <input type="email" name="email" className="form-control Email" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                    <div id="emailHelp" className="form-text">Мы никогда никому не передадим вашу электронную почту.</div>
-                  </div>
+                <div className="col-44">
+                  <label htmlFor="exampleInputEmail1" className="form-label">Телефон</label>
+                  <input type="text" name="phone" className="form-control telephoneInput" id="exampleInputEmail1" aria-describedby="phoneHelp" placeholder="Укажите Ваш номер телефона" />
                 </div>
 
-                <div className="col-4">
-                  <input className="buttonStyle Photo" type="file" name="photo" />
-                </div>
-              </div>
-
-              <div className="row">
-
-                <div className="mb-3">
+                <div className="mb-33">
                   <label htmlFor="exampleInputPassword1" className="form-label">Описание заказа</label>
-                  <input type="text" name="description" className="form-control Description" id="exampleInputDescription1" />
+                  <input type="text" name="description" className="form-control h-40 orderHeigth" id="exampleInputDescription1" placeholder="Подробно опишите Ваши пожелания к заказу" />
                 </div>
 
-              </div>
+                <div className="uploadPhoto">
+                  <input className="buttonStyle chooseFile" type="file" name="photo" />
+                </div>
 
-              <button type="submit" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Отправить</button>
-            </form>
+                <button type="submit" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

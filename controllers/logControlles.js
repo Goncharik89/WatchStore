@@ -25,13 +25,13 @@ const loginUser = async (req, res) => {
       req.session.newUserEmail = user.email;
       req.session.newUserName = user.name;
       req.session.save(() => {
-        res.redirect('/');
+        res.json({ isLogSuccessful: true });
       });
     } else {
-      res.redirect('/login');
+      res.json({ isLogSuccessful: false });
     }
   } catch (error) {
-    res.send(`Error ------> ${error}`);
+    res.json({ isLogSuccessful: false });
   }
 };
 // ! Не забыть экспортировать ВСЕ функции и использовать их в ручках

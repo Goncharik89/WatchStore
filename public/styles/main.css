@@ -1,4 +1,17 @@
-/* СТИЛИ ПЕРВОГО СЛАЙДА, ЕГО КНОПКИ, НАДПИСИ */
+body {
+  font-family: 'Roboto';
+}
+
+
+/* СТИЛИ ПЕРВОГО СЛАЙДА, ЕГО КНОПКИ, НАДПИСИ ////////////////////////////////////////////////////////////////*/
+
+.articleBlock {
+  /* display: flex !important; */
+  /* flex-direction: row !important; */
+  margin: 0 0 100px 0;
+  padding: 0 !important;
+  
+}
 
 .artBtn {
   display: flex;
@@ -12,7 +25,7 @@
   background-color: #FF6879;
   border-color: #FF6879;
 }
-
+  
 p {
   display: flex;
   justify-content: flex-start;
@@ -21,32 +34,25 @@ p {
 .articleH1 {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 30px;
 }
+  
 
 
-/* .style{
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-around;
-  align-items: center;
-  justify-content: center;
-}
-
-.styleT{
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-content: flex-start;
-  justify-content: center;
-  align-items: center;
-} */
-
-
-/* СТИЛИ ХЭДЭРА */
+/* СТИЛИ ХЭДЭРА ////////////////////////////////////////////////////////////////*/
 
 .header {
 background-color: #75C9CC;
 margin-bottom: 0px !important;
 border: 0 !important;
+}
+
+.centrMenu {
+  display: flex !important;
+  flex-direction: row !important;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerLi {
@@ -60,7 +66,8 @@ margin-right: 50px;
 color: #FF6879 !important;
 }
 
-/* СТИЛИ ЛОГО */
+
+/* СТИЛИ ЛОГО ////////////////////////////////////////////////////////////////*/
 
 .logo {
 font-weight: 700;
@@ -70,7 +77,7 @@ margin-left: 50px;
 }
 
 .enterReg {
-margin-right: 50px;
+  margin-right: 100px;
 }
 
 .enterBtn {
@@ -97,8 +104,167 @@ background-color: #FF6879;
 border-color: #FF6879;
 }
 
-.row{
-justify-content: space-between;
-align-items: center;
-align-content: center;
+.enterBtn {
+  width: 100px;
+  background-color: #FF909D !important;
+  border-color: #FF909D !important;
+  color: #ffffff !important;
 }
+
+.enterBtn:hover {
+  background-color: #FF6879 !important;
+  border-color: #FF6879 !important;
+}
+
+.regBtn {
+  width: 200px;
+  background-color: #FF909D !important;
+  border-color: #FF909D !important;
+  color: #ffffff !important;
+}
+
+.regBtn:hover {
+  background-color: #FF6879 !important;
+  border-color: #FF6879 !important;
+}
+
+
+/* СТИЛИ ФОРМЫ ОТПРАВКИ ЗАЯВКИ ////////////////////////////////////////////////////////////////*/
+
+.orderForm {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px !important;
+}
+
+.requestForm{
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center
+}
+
+.orderFormBlock {
+  height: 600px !important;
+  width: 600px !important;
+  background-color: #75C9CC !important;
+  border-color: #75C9CC !important;
+  border-radius: 20px;
+}
+
+.nameInput, .emailInput, .telephoneInput, .orderHeigth {
+  width: 500px;
+  margin-bottom: 30px !important;
+  border-radius: 8px;
+}
+
+.orderHeigth {
+  min-height: 80px;
+}
+
+.chooseFile {
+  width: 500px;
+  margin-bottom: 30px !important;
+}
+
+.sendMessage {
+  width: 300px;
+  margin-bottom: 30px !important;
+  background-color: #FF909D;
+  border-color: #FF909D;
+  border-color: #ffffff !important;
+}
+
+.sendMessage:hover {
+  background-color: #FF6879;
+  border-color: #FF6879;
+}
+
+.nameLabel {
+  margin-top: 20px;
+}
+
+.form-label {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+
+}
+
+
+/* СТИЛИ КАТАЛОГА //////////////////////////////////////////////////////////////// */
+
+.catalog, .catalogSlide, .slide, .carousel-inner{
+  margin-bottom: 100px;
+  height: 600px;
+}
+
+.catalogTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #75C9CC;
+  margin-bottom: 20px;
+}
+
+.text-start {
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+
+/* СТИЛИ ОБО МНЕ //////////////////////////////////////////////////////////////// */
+
+.about {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  margin: 0 100px 100px 100px;
+  display: flex !important;
+  flex-direction: row !important;
+  padding: 0 !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutImg {
+  width: 600px;
+  height: 500px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 20px;
+}
+
+.aboutPhoto {
+  border-radius: 20px;
+}
+
+.aboutContainer {
+  margin: 0px;
+  padding: 0px;
+}
+
+.aboutBtn, .catalogBtn {
+  width: 200px;
+  background-color: #FF909D !important;
+  border-color: #FF909D !important;
+  border-radius: 8px;
+}
+
+.aboutTitle {
+  color: #75C9CC;
+  margin-bottom: 30px;
+}
+
+.aboutTextBody {
+  margin: 0 100px 30px 0;
+  text-align: justify;
+  font-size: 24px;
+
+}
+

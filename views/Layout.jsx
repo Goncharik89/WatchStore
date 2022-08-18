@@ -27,12 +27,14 @@ module.exports = function Layout({ children }) {
         <script defer src="/js/application.js" />
       </head>
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom header">
-        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Scirocco</a>
+        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Sciroco</a>
 
-        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#about" className="nav-link px-2 link-dark headerLi">О нас</a></li>
-          <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
-          <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li>
+        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 centrMenu">
+          <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
+          <li><a href="#catalog" className="nav-link px-2 link-dark headerLi">Каталог</a></li>
+          <li><a href="#order" className="nav-link px-2 link-dark headerLi">Заказать</a></li>
+          {/* <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
+          <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li> */}
         </ul>
         <div className="col-md-3 text-end enterReg">
           <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
@@ -65,7 +67,7 @@ module.exports = function Layout({ children }) {
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
               </div>
               <div className="modal-body">
-                <form action="/register" method="POST" id="loginForm">
+                <form action="/register" method="POST" id="registerForm">
                   <label htmlFor="exampleInput1" className="form-label">Имя</label>
                   <input name="name" type="text" className="form-control" />
                   <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>
@@ -81,6 +83,39 @@ module.exports = function Layout({ children }) {
       </header>
       <body>
         { children }
+        <footer>
+          <section className="footer">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-4 col-6">
+                  <h4>Информация</h4>
+                  <ul className="list-unstyled">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Условия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+
+                <div className="col-md-4 col-6">
+                  <h4>Контакты</h4>
+                  <ul className="list-unstyled">
+                    <li> Тел. +7 (999)-777-77-77</li>
+                    <li> Тел. +7 (495)-555-55-55</li>
+                    <li>Email. watch@mail.ru</li>
+                  </ul>
+                </div>
+                <div className="col-md-4 col-6">
+                  <h4>Мы в сети</h4>
+                  <ul className="sb circle gray text">
+                    <li><a href="#" className="twitter">Twitter</a></li>
+                    <li><a href="#" className="Telegram">Telegram</a></li>
+                    <li><a href="#" className="facebook">Facebook</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </footer>
       </body>
     </html>
   );
