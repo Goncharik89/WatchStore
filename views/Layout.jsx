@@ -14,6 +14,7 @@ module.exports = function Layout({ children, newUser }) {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" />
         <script
           defer
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -27,7 +28,7 @@ module.exports = function Layout({ children, newUser }) {
         <script defer src="/js/application.js" />
       </head>
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom header">
-        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Sciroco</a>
+        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Scirocco</a>
 
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 centrMenu">
           <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
