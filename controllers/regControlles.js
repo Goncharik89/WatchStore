@@ -28,10 +28,10 @@ const regUser = async (req, res) => {
     // * 15 обработка ошибки в консоли
     // ! Если не написать, то redirect может происходить раньше, чем записаь файла в session
     req.session.save(() => {
-      res.json({ isLogSuccessful: true });
+      res.json({ isRegSuccessful: true });
     });
   } catch (error) {
-    res.json({ isLogSuccessful: false });
+    res.json({ isRegSuccessful: false });
   }
 };
 
