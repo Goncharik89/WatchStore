@@ -17,6 +17,7 @@ const homeRouter = require('./routes/homeRouter');
 const regRoutes = require('./routes/regRoutes');
 const logRoutes = require('./routes/logRoutes');
 const orderRouts = require('./routes/order');
+const ordersPageRouter = require('./routes/ordersPageRouter');
 
 const app = express();
 
@@ -46,6 +47,7 @@ app.use('/', homeRouter);
 app.use('/register', regRoutes);
 app.use('/login', logRoutes);
 app.use('/order', orderRouts);
+app.use('/orders', ordersPageRouter);
 
 app.listen(PORT, async () => {
   try {
