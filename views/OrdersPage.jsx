@@ -1,5 +1,6 @@
 const React = require('react');
 const Layout = require('./Layout');
+const OrderItem = require('./OrderItem');
 
 module.exports = function OrdersPage({ orders }) {
   return (
@@ -10,6 +11,7 @@ module.exports = function OrdersPage({ orders }) {
           <thead>
             <tr>
               <th scope="col">#</th>
+              <th scope="col">Дата</th>
               <th scope="col">Имя</th>
               <th scope="col">Email</th>
               <th scope="col">Телефон</th>
@@ -18,14 +20,7 @@ module.exports = function OrdersPage({ orders }) {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto@gmail.com</td>
-              <td>+7(777)777-77-77</td>
-              <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, at.</td>
-              <td>@mdo</td>
-            </tr>
+            {orders.map((order) => <OrderItem key={order.id} order={order} />)}
           </tbody>
         </table>
       </div>
