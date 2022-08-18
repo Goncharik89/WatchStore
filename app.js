@@ -56,7 +56,7 @@ app.listen(PORT, async () => {
     await sequelize.authenticate(app);
     console.log('Соединение с базой установлено!');
   } catch (error) {
-    console.log('Faaaack!!!', error);
+    console.log('Error', error);
   }
   console.log(`Сервер запущен на порту ${PORT}!`);
 });
