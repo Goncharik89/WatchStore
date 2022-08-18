@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Order({}) {
+function Order({ userId }) {
   return (
 
     <>
@@ -30,7 +30,7 @@ function Order({}) {
 
             <div className="orderFormBlock">
 
-              <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="requestForm">
+              <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="requestForm order">
 
                 <div className="col-44">
                   <label htmlFor="exampleInputEmail1" className="form-label nameLabel">Имя</label>
@@ -56,7 +56,7 @@ function Order({}) {
                   <input className="buttonStyle chooseFile" type="file" name="photo" />
                 </div>
 
-                <button type="submit" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Отправить</button>
+                <button type="submit" className="btn btn-primary" id={`${userId}`} data-bs-toggle="modal" data-bs-target="#exampleModal">Отправить</button>
               </form>
             </div>
           </div>
