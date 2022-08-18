@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, newUser, newUserRole }) {
   return (
     <html lang="en">
       <head>
@@ -15,6 +15,7 @@ module.exports = function Layout({ children }) {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" />
         <script
           defer
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
@@ -28,18 +29,39 @@ module.exports = function Layout({ children }) {
         <script defer src="/js/application.js" />
       </head>
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom header">
-        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Sciroco</a>
+        <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Scirocco</a>
 
-        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 centrMenu">
+        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 centrMenu" id="navBarMenu">
           <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
           <li><a href="#catalog" className="nav-link px-2 link-dark headerLi">Каталог</a></li>
           <li><a href="#order" className="nav-link px-2 link-dark headerLi">Заказать</a></li>
+          {newUserRole ? (
+            <li><a href="/orders" className="nav-link px-2 link-dark headerLi">Заказы</a></li>
+          ) : (
+          ''
+          )}
           {/* <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
           <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li> */}
         </ul>
         <div className="col-md-3 text-end enterReg">
-          <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
-          <button type="submit" className="btn btn-primary regBtn" data-bs-toggle="modal" data-bs-target="#Backdrop">Регистрация</button>
+          { newUser ? (
+            <div>
+              <span>
+                Привет,
+                {' '}
+                {newUser}
+                !
+              </span>
+              <a href="/logout">
+                <button type="submit" className="btn btn-primary regBtn">Выйти</button>
+              </a>
+            </div>
+          ) : (
+            <div>
+              <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
+              <button type="submit" className="btn btn-primary regBtn" data-bs-toggle="modal" data-bs-target="#Backdrop">Регистрация</button>
+            </div>
+          ) }
         </div>
         <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div className="modal-dialog">

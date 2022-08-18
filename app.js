@@ -16,6 +16,7 @@ const { sequelize } = require('./db/models');
 const homeRouter = require('./routes/homeRouter');
 const regRoutes = require('./routes/regRoutes');
 const logRoutes = require('./routes/logRoutes');
+const logoutRoutes = require('./routes/logoutRoutes');
 const orderRouts = require('./routes/order');
 const ordersPageRouter = require('./routes/ordersPageRouter');
 
@@ -46,6 +47,7 @@ app.use(session(sessionConfig));
 app.use('/', homeRouter);
 app.use('/register', regRoutes);
 app.use('/login', logRoutes);
+app.use('/logout', logoutRoutes);
 app.use('/order', orderRouts);
 app.use('/orders', ordersPageRouter);
 

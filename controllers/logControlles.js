@@ -24,6 +24,7 @@ const loginUser = async (req, res) => {
       // * 27 если пароль верный, создаём сессию
       req.session.newUserEmail = user.email;
       req.session.newUserName = user.name;
+      req.session.newUserRole = user.role;
       req.session.save(() => {
         res.json({ isLogSuccessful: true });
       });

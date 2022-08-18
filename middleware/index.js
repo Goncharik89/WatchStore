@@ -27,3 +27,13 @@ exports.isAuthor = async (req, res, next) => {
     throw new Error(error.message);
   }
 };
+
+const checkAdmin = (req, res, next) => {
+  if (req.session.newUserRole === 'admin') {
+    next();
+  } else {
+    res.redirect('/');
+  }
+};
+
+module.exports = { checkAdmin };

@@ -38,9 +38,9 @@ body {
 /* СТИЛИ ХЭДЭРА ////////////////////////////////////////////////////////////////*/
 
 .header {
-  background-color: #75C9CC;
-  margin-bottom: 0px !important;
-  border: 0 !important;
+background-color: #75C9CC;
+margin-bottom: 0px !important;
+border: 0 !important;
 }
 
 .centrMenu {
@@ -52,28 +52,52 @@ body {
 }
 
 .headerLi {
-  color: #ffffff !important;
-  font-weight: 700;
-  font-size: 25px;
-  margin-right: 50px;
+color: #ffffff !important;
+font-weight: 700;
+font-size: 28px;
+margin-right: 50px;
 }
 
 .headerLi:hover {
-  color: #FF6879 !important;
+color: #FF6879 !important;
 }
 
 
 /* СТИЛИ ЛОГО ////////////////////////////////////////////////////////////////*/
 
 .logo {
-  font-weight: 700;
-  font-size: 48px;
-  color: #ffffff !important;
-  margin-left: 100px;
+font-weight: 700;
+font-size: 48px;
+color: #ffffff !important;
+margin-left: 50px;
 }
 
 .enterReg {
   margin-right: 100px;
+}
+
+.enterBtn {
+width: 100px;
+background-color: #FF909D;
+border-color: #FF909D;
+color: #ffffff;
+}
+
+.enterBtn:hover {
+background-color: #FF6879;
+border-color: #FF6879;
+}
+
+.regBtn {
+width: 200px;
+background-color: #FF909D;
+border-color: #FF909D;
+color: #ffffff;
+}
+
+.regBtn:hover {
+background-color: #FF6879;
+border-color: #FF6879;
 }
 
 .enterBtn {
@@ -239,7 +263,6 @@ body {
   font-size: 24px;
 
 }
-
 
 /* СТИЛИ ФУТЕРА //////////////////////////////////////////////////////////////// */
 

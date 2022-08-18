@@ -6,8 +6,9 @@ const renderHome = async (req, res) => {
   try {
     // const watch = await Watch.findAll();
     // console.log(watch);
-    const newUser = req.session?.newUser;
-    renderTemplate(Home, { newUser }, res);
+    const newUser = req.session?.newUserName;
+    const newUserRole = req.session?.newUserRole;
+    renderTemplate(Home, { newUser, newUserRole }, res);
   } catch (error) {
     res.status(500).json({ errorMessage: error.message });
   }
