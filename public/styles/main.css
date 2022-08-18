@@ -14,53 +14,37 @@ body {
 }
 
 .artBtn {
-    display: flex;
-    justify-content: center;
-    width: 200px;
-    background-color: #FF909D !important;
-    border-color: #FF909D !important;
-  }
-  
-  .artBtn:hover {
-    background-color: #FF6879 !important;
-    border-color: #FF6879 !important;
-  }
-  
-  p {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .articleH1 {
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 30px;
-  }
-  
-
-/* .style{
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  background-color: #FF909D;
+  border-color: #FF909D;
 }
 
-.styleT{
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: center;
-    align-items: center;
-} */
+.artBtn:hover {
+  background-color: #FF6879;
+  border-color: #FF6879;
+}
+  
+p {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.articleH1 {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+  
 
 
 /* СТИЛИ ХЭДЭРА ////////////////////////////////////////////////////////////////*/
 
 .header {
-  background-color: #75C9CC;
-  margin-bottom: 0px !important;
-  border: 0 !important;
+background-color: #75C9CC;
+margin-bottom: 0px !important;
+border: 0 !important;
 }
 
 .centrMenu {
@@ -72,28 +56,52 @@ body {
 }
 
 .headerLi {
-  color: #ffffff !important;
-  font-weight: 700;
-  font-size: 25px;
-  margin-right: 50px;
+color: #ffffff !important;
+font-weight: 700;
+font-size: 28px;
+margin-right: 50px;
 }
 
 .headerLi:hover {
-  color: #FF6879 !important;
+color: #FF6879 !important;
 }
 
 
 /* СТИЛИ ЛОГО ////////////////////////////////////////////////////////////////*/
 
 .logo {
-  font-weight: 700;
-  font-size: 48px;
-  color: #ffffff !important;
-  margin-left: 100px;
+font-weight: 700;
+font-size: 48px;
+color: #ffffff !important;
+margin-left: 50px;
 }
 
 .enterReg {
   margin-right: 100px;
+}
+
+.enterBtn {
+width: 100px;
+background-color: #FF909D;
+border-color: #FF909D;
+color: #ffffff;
+}
+
+.enterBtn:hover {
+background-color: #FF6879;
+border-color: #FF6879;
+}
+
+.regBtn {
+width: 200px;
+background-color: #FF909D;
+border-color: #FF909D;
+color: #ffffff;
+}
+
+.regBtn:hover {
+background-color: #FF6879;
+border-color: #FF6879;
 }
 
 .enterBtn {
@@ -259,3 +267,4 @@ body {
   font-size: 24px;
 
 }
+
