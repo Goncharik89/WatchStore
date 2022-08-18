@@ -1,6 +1,40 @@
 const regForm = document.querySelector('#registerForm');
 const logForm = document.querySelector('#loginForm');
 
+const orderButton = document.querySelector('.order')
+
+
+orderButton?.addEventListener('submit', (event)=> {
+    event.preventDefault();
+    const name = orderButton.querySelector('.nameInput').value;
+    const phone = orderButton.querySelector('.telephoneInput').value;
+    const email = orderButton.querySelector('.emailInput').value;
+    const photo = orderButton.querySelector('.chooseFile').value;
+    const description = orderButton.querySelector('.orderHeigth').value;
+   
+    const modal = document.querySelector('#exampleModal');
+    try {
+        const response = await fetch('/order', {
+          method: 'post',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            phone,
+            email,
+            photo,
+            description
+          }),
+        });
+        setTimeout(()=>   , 8000)
+        window.location.replace('/');
+      } catch (error) {
+        console.log(error);
+      }
+})
+
+
 regForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   const response = await fetch('/register', {

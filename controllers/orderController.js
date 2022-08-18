@@ -10,7 +10,8 @@ exports.formOrder = async (req, res) => {
 
 exports.newOrder = async (req, res) => { // multer создает req.file
   try {
-    const findUser = await User.findOne({ where: { email: req.session.newUserEmail } });
+
+    const findUser = await User.findOne({ where: { email: req.session.newUserEmail } }); // ищем юзера
     await Order.create({
       // watch_id: findWatch.id,
       user_id: findUser.id,

@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, newUser }) {
   return (
     <html lang="en">
       <head>
@@ -38,8 +38,19 @@ module.exports = function Layout({ children }) {
           <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li> */}
         </ul>
         <div className="col-md-3 text-end enterReg">
-          <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
-          <button type="submit" className="btn btn-primary regBtn" data-bs-toggle="modal" data-bs-target="#Backdrop">Регистрация</button>
+          { newUser ? (
+            <div>
+              <span>Привет, {newUser}!</span>
+              <a href="/logout">
+                <button type="submit" className="btn btn-primary regBtn">Выйти</button>
+              </a>
+            </div>
+          ) : (
+            <div>
+              <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
+              <button type="submit" className="btn btn-primary regBtn" data-bs-toggle="modal" data-bs-target="#Backdrop">Регистрация</button>
+            </div>
+          ) }
         </div>
         <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div className="modal-dialog">
