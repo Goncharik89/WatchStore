@@ -5,9 +5,12 @@ const OrderItem = require('./OrderItem');
 module.exports = function OrdersPage({ orders }) {
   return (
     <Layout>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" />
+      <script src="/js/table2csv.min.js" />
+      <script src="/js/tabletocsv.js" defer />
       <h1>Заказы:</h1>
       <div>
-        <table className="table">
+        <table id="table" className="table">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -24,6 +27,7 @@ module.exports = function OrdersPage({ orders }) {
           </tbody>
         </table>
       </div>
+      <button id="downloadcsv" className="btn btn-primary regBtn" type="button">Экспорт в CSV</button>
     </Layout>
   );
 };
