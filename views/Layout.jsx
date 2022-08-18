@@ -28,25 +28,23 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
         <link rel="stylesheet" href="/styles/main.css" />
         <script defer src="/js/application.js" />
       </head>
-      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom header">
+      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom header" id="headerAnchor">
         <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Scirocco</a>
 
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 centrMenu" id="navBarMenu">
           <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
-          <li><a href="#catalog" className="nav-link px-2 link-dark headerLi">Каталог</a></li>
-          <li><a href="#order" className="nav-link px-2 link-dark headerLi">Заказать</a></li>
-          {newUserRole ? (
-            <li><a href="/orders" className="nav-link px-2 link-dark headerLi">Заказы</a></li>
-          ) : (
-          ''
-          )}
-          {/* <li><a href="#terms" className="nav-link px-2 link-dark headerLi">Условия</a></li>
-          <li><a href="#guarantee" className="nav-link px-2 link-dark headerLi">Гарантия</a></li> */}
+          <li><a href="#catalog" className="nav-link px-2 link-dark headerLiCentr">Каталог</a></li>
+          <li><a href="#order" className="nav-link px-2 link-dark headerLiRight">Заказать</a></li>
         </ul>
+        {newUserRole ? (
+          <div><a href="/orders" className="nav-link px-2 link-dark headerLiZakazi">Заказы</a></div>
+        ) : (
+          ''
+        )}
         <div className="col-md-3 text-end enterReg">
           { newUser ? (
             <div>
-              <span>
+              <span className="greetingUser">
                 Привет,
                 {' '}
                 {newUser}
@@ -57,7 +55,7 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
               </a>
             </div>
           ) : (
-            <div>
+            <div className="enterModal">
               <button type="submit" className="btn btn-outline-primary me-2 enterBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Вход</button>
               <button type="submit" className="btn btn-primary regBtn" data-bs-toggle="modal" data-bs-target="#Backdrop">Регистрация</button>
             </div>
@@ -75,8 +73,10 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
                   <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>
                   <input name="email" type="email" className="form-control" id="exampleInput1" />
                   <label htmlFor="exampleInput2" className="form-label">Пароль</label>
-                  <input name="password" type="password" className="form-control" id="exampleInput2" />
-                  <button type="submit" className="btn btn-primary">Отправить</button>
+
+                  <input name="password" type="text" className="form-control" id="exampleInput2" />
+                  <button type="submit" className="btn btn-primary modalBtn">Войти</button>
+
                 </form>
               </div>
             </div>
@@ -96,8 +96,10 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
                   <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>
                   <input name="email" type="email" className="form-control" />
                   <label htmlFor="exampleInput2" className="form-label">Пароль</label>
-                  <input name="password" type="password" className="form-control" />
-                  <button type="submit" className="btn btn-primary">Отправить</button>
+
+                  <input name="password" type="text" className="form-control" />
+                  <button type="submit" className="btn btn-primary modalBtn">Зарегистрироваться</button>
+
                 </form>
               </div>
             </div>
@@ -106,7 +108,10 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
       </header>
       <body>
         { children }
-        <footer>
+        <div>
+          <a href="#headerAnchor" className="arrowUp"><img src="img/up.png" className="buttonUp" /></a>
+        </div>
+        <footer className="footerBlock">
           <section className="footer">
             <div className="containerFooter">
               <div className="row">

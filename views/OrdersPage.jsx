@@ -27,7 +27,7 @@ module.exports = function OrdersPage({ orders, newUser, newUserRole }) {
           </tbody>
         </table>
       </div>
-      <button id="downloadcsv" className="btn btn-primary regBtn" type="button">Экспорт в CSV</button>
+      <button id="downloadcsv" className="btn btn-primary regBtn csvBtn" type="button">Экспорт в CSV</button>
     </Layout>
   );
 };

@@ -13,11 +13,12 @@ function Order({ userId }) {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" />
             </div>
             <div className="modal-body">
-              Ваш заказ принят, на вашу почту отправлено письмо
+              Спасибо за заявку, Ваш заказ принят!
             </div>
             <div className="modal-footer">
-              <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-              <button type="button" className="btn btn-primary">Сохранить изменения</button>
+              <button type="button" className="btn btn-secondary footerModalBtn" data-bs-dismiss="modal">OK</button>
+              {/* <button type="button" className="btn btn-primary">Сохранить изменения</button> */}
+
             </div>
           </div>
         </div>
@@ -56,7 +57,7 @@ function Order({ userId }) {
                   <input className="buttonStyle chooseFile" type="file" name="photo" />
                 </div>
 
-                <button type="submit" className="btn btn-primary" id={`${userId}`} data-bs-toggle="modal" data-bs-target="#exampleModal">Отправить</button>
+                <button type="submit" className="btn btn-primary sendMessage" id={`${userId}`} data-bs-toggle="modal" data-bs-target="#exampleModal">Отправить</button>
               </form>
             </div>
           </div>

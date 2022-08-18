@@ -62,8 +62,7 @@ regForm.addEventListener('submit', async (event) => {
     if (parent.lastChild.nodeName === 'H5') {
       parent.removeChild(parent.lastChild);
     }
-    errorDiv.innerText = `Упс, что-то пошло не так, возможно вы забыли заполнить одно из полей, 
-    либо пользователь с таким Email уже существует, попробуйте еще раз.`;
+    errorDiv.innerText = `Не заполнены поля, либо пользователь с таким Email уже существует. Попробуйте еще раз.`;
     parent.append(errorDiv);
     return;
   }
