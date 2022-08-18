@@ -2,7 +2,7 @@ const React = require('react');
 
 module.exports = function Article() {
   return (
-    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselExampleFade" className="carousel slide carousel-fade articleBlock" data-bs-ride="carousel">
       <div className="carousel-inner">
 
         <div className="carousel-item active" data-bs-interval="3000">
