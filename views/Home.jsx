@@ -6,9 +6,9 @@ const Layout = require('./Layout');
 const Order = require('./Order');
 const Article = require('./Article');
 
-module.exports = function Home({ newUser }) {
+module.exports = function Home({ newUser, newUserRole }) {
   return (
-    <Layout newUser={newUser}>
+    <Layout newUser={newUser} newUserRole={newUserRole}>
       <Article />
       <About />
       <Catalog />

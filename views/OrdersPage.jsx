@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('./Layout');
 const OrderItem = require('./OrderItem');
 
-module.exports = function OrdersPage({ orders }) {
+module.exports = function OrdersPage({ orders, newUser, newUserRole }) {
   return (
-    <Layout>
+    <Layout newUser={newUser} newUserRole={newUserRole}>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" />
       <script src="/js/table2csv.min.js" />
       <script src="/js/tabletocsv.js" defer />
