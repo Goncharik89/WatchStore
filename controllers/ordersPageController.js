@@ -2,8 +2,6 @@ const renderTemplate = require('../lib/renderTemplate');
 const OrdersPage = require('../views/OrdersPage');
 const { Order } = require('../db/models');
 
-console.log(Order);
-
 const renderOrdersPage = async (req, res) => {
   try {
     const orders = await Order.findAll();
