@@ -4,11 +4,7 @@ const Layout = require('./Layout');
 function Order({}) {
   return (
 
-    <div className="container orderForm">
-
-    <div id="order">
-      <div className="container">
-
+    <div className="container orderForm" id="order">
 
       <div className="orderFormBlock">
 
