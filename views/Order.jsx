@@ -4,12 +4,14 @@ const Layout = require('./Layout');
 function Order({}) {
   return (
 
+
     <div className="container orderForm">
 
       <div id="order">
         <div className="container">
 
           <div className="orderFormBlock">
+
 
             <form id="editEntryForm" action="/order" method="post" encType="multipart/form-data" className="requestForm">
 
