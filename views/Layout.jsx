@@ -73,9 +73,9 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
               <div className="modal-body">
                 <form action="/login" method="POST" id="loginForm">
                   <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>
-                  <input name="email" type="text" className="form-control" id="exampleInput1" />
+                  <input name="email" type="email" className="form-control" id="exampleInput1" />
                   <label htmlFor="exampleInput2" className="form-label">Пароль</label>
-                  <input name="password" type="text" className="form-control" id="exampleInput2" />
+                  <input name="password" type="password" className="form-control" id="exampleInput2" />
                   <button type="submit" className="btn btn-primary">Отправить</button>
                 </form>
               </div>
@@ -94,9 +94,9 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
                   <label htmlFor="exampleInput1" className="form-label">Имя</label>
                   <input name="name" type="text" className="form-control" />
                   <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>
-                  <input name="email" type="text" className="form-control" />
+                  <input name="email" type="email" className="form-control" />
                   <label htmlFor="exampleInput2" className="form-label">Пароль</label>
-                  <input name="password" type="text" className="form-control" />
+                  <input name="password" type="password" className="form-control" />
                   <button type="submit" className="btn btn-primary">Отправить</button>
                 </form>
               </div>
