@@ -4,11 +4,12 @@ const OrderJSX = require('../views/Order');
 const { User, Order } = require('../db/models');
 
 exports.formOrder = async (req, res) => {
-  const name = req.session?.newUserName;
-  renderTemplate(OrderJSX, { username: name }, res);
+  const user = await User.findOne({ where: { email: req.session.newUserEmail } });
+  renderTemplate(OrderJSX, { userId: user.id }, res);
 };
 
 exports.newOrder = async (req, res) => { // multer создает req.file
+  console.log(req.body)
   try {
 
     const findUser = await User.findOne({ where: { email: req.session.newUserEmail } }); // ищем юзера
@@ -25,7 +26,8 @@ exports.newOrder = async (req, res) => { // multer создает req.file
       plain: true, // хз
     });
 
-    res.redirect('/');
+    // res.json();
+    setTimeout(() => res.redirect('/'), 4000);
   } catch (error) {
     res.send(error.message);
   }

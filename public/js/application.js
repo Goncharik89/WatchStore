@@ -1,39 +1,45 @@
 const regForm = document.querySelector('#registerForm');
 const logForm = document.querySelector('#loginForm');
 
-const orderButton = document.querySelector('.order')
+// const orderButton = document.querySelector('.order');
+// console.log(orderButton);
 
+// orderButton?.addEventListener('submit', async (event) => {
+//   event.preventDefault();
+//   const name = orderButton.querySelector('.nameInput').value;
+//   const phone = orderButton.querySelector('.telephoneInput').value;
+//   const email = orderButton.querySelector('.emailInput').value;
+//   const photo = orderButton.querySelector('.chooseFile').value;
+//   const description = orderButton.querySelector('.orderHeigth').value;
 
-orderButton?.addEventListener('submit', (event)=> {
-    event.preventDefault();
-    const name = orderButton.querySelector('.nameInput').value;
-    const phone = orderButton.querySelector('.telephoneInput').value;
-    const email = orderButton.querySelector('.emailInput').value;
-    const photo = orderButton.querySelector('.chooseFile').value;
-    const description = orderButton.querySelector('.orderHeigth').value;
-   
-    const modal = document.querySelector('#exampleModal');
-    try {
-        const response = await fetch('/order', {
-          method: 'post',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name,
-            phone,
-            email,
-            photo,
-            description
-          }),
-        });
-        setTimeout(()=>   , 8000)
-        window.location.replace('/');
-      } catch (error) {
-        console.log(error);
-      }
-})
+//   const { id } = orderButton.querySelector('.btn-primary');
 
+//   console.log(id);
+
+//   console.log(name, phone, email, photo, description);
+//   const modal = document.querySelector('#exampleModal');
+//   try {
+//     const response = await fetch('/order', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         // user_id: 1,
+//         name,
+//         phone,
+//         email,
+//         photo,
+//         description,
+//       }),
+//     });
+//     // if (response.status === 200) { return window.location.replace('/'); }
+//     // setTimeout(()=>   , 8000)
+//     window.location.replace('/');
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 regForm.addEventListener('submit', async (event) => {
   event.preventDefault();
