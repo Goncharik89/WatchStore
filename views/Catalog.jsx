@@ -3,7 +3,7 @@ const React = require('react');
 module.exports = function Catalog() {
   return (
     <div id="catalog" className="catalog">
-      <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+      <div id="myCarousel" className="carousel slide catalogSlideBlock" data-bs-ride="carousel">
         {/* <div className="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" />
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" />
@@ -17,7 +17,7 @@ module.exports = function Catalog() {
           <div className="carousel-item active catalogSlide">
             <img src="img/watches/1.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Hamilton</h1>
                 <p>Модель обладает компактными размерами и профессиональным качеством</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -28,7 +28,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/2.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Tag Heuer</h1>
                 <p>Воплощает в себе страсть, которую мы вкладываем в создание часов</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -39,7 +39,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/3.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Orient</h1>
                 <p>Изысканный дизайн и неподвластные времени материалы</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -50,7 +50,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/4.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Atlantic</h1>
                 <p>Элегантная и утонченная модель механических часов</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -61,7 +61,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/5.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Skagen</h1>
                 <p>Впечатлит людей, над которыми даже время не властно</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -72,7 +72,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/6.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Rado</h1>
                 <p>Изысканность и шарм</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -83,7 +83,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/7.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Longines</h1>
                 <p>Изысканный дизайн и неподвластный времени стиль</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -94,7 +94,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/8.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Timex</h1>
                 <p>Воплощает в себе страсть, которую мы вкладываем в создание часов</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
@@ -105,7 +105,7 @@ module.exports = function Catalog() {
           <div className="carousel-item catalogSlide">
             <img src="img/watches/9.png" className="d-block w-100" alt="" />
             <div className="container">
-              <div className="carousel-caption text-start">
+              <div className="carousel-caption text-start catalogBtn1024">
                 <h1>Raymond Weil</h1>
                 <p>Элегантная и утонченная модель механических часов</p>
                 <p><a className="btn btn-lg btn-primary catalogBtn" href="#order">Заказать</a></p>
