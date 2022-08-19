@@ -7,7 +7,7 @@ module.exports = function Article() {
 
         <div className="carousel-item active" data-bs-interval="3000">
           <img src="img/articleSlider/1.png" className="d-block w-100" alt="слайдер часов №1" />
-          <div className="carousel-caption text-end">
+          <div className="carousel-caption text-end articleBtn1024">
             <h1 className="articleH1">Эксклюзивные часы ручной работы</h1>
             <p><a className="btn btn-lg btn-primary artBtn" href="#about">Подробнее</a></p>
           </div>
@@ -15,7 +15,7 @@ module.exports = function Article() {
 
         <div className="carousel-item" data-bs-interval="3000">
           <img src="img/articleSlider/2.png" className="d-block w-100" alt="слайдер часов №2" />
-          <div className="carousel-caption text-end">
+          <div className="carousel-caption text-end articleBtn1024">
             <h1 className="articleH1">Эксклюзивные часы ручной работы</h1>
             <p><a className="btn btn-lg btn-primary artBtn" href="#about">Подробнее</a></p>
           </div>
@@ -23,7 +23,7 @@ module.exports = function Article() {
 
         <div className="carousel-item">
           <img src="img/articleSlider/3.png" className="d-block w-100" alt="слайдер часов №3" />
-          <div className="carousel-caption text-end">
+          <div className="carousel-caption text-end articleBtn1024">
             <h1 className="articleH1">Эксклюзивные часы ручной работы</h1>
             <p><a className="btn btn-lg btn-primary artBtn" href="#about">Подробнее</a></p>
           </div>
@@ -31,7 +31,7 @@ module.exports = function Article() {
 
         <div className="carousel-item">
           <img src="img/articleSlider/4.png" className="d-block w-100" alt="слайдер часов №4" />
-          <div className="carousel-caption text-end">
+          <div className="carousel-caption text-end articleBtn1024">
             <h1 className="articleH1">Эксклюзивные часы ручной работы</h1>
             <p><a className="btn btn-lg btn-primary artBtn" href="#about">Подробнее</a></p>
           </div>
@@ -39,7 +39,7 @@ module.exports = function Article() {
 
         <div className="carousel-item">
           <img src="img/articleSlider/5.png" className="d-block w-100" alt="слайдер часов №5" />
-          <div className="carousel-caption text-end">
+          <div className="carousel-caption text-end articleBtn1024">
             <h1 className="articleH1">Эксклюзивные часы ручной работы</h1>
             <p><a className="btn btn-lg btn-primary artBtn" href="#about">Подробнее</a></p>
           </div>

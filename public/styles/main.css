@@ -56,7 +56,10 @@ p {
   align-items: center; */
 }
 
-.headerLi, .headerLiRight, .headerLiCentr, .headerLiZakazi {
+.headerLi,
+.headerLiRight,
+.headerLiCentr,
+.headerLiZakazi {
   color: #ffffff !important;
   font-weight: 700;
   font-size: 28px;
@@ -64,7 +67,10 @@ p {
   padding: 0 20px 0 20px;
 }
 
-.headerLi:hover, .headerLiRight:hover, .headerLiCentr:hover, .headerLiZakazi:hover {
+.headerLi:hover,
+.headerLiRight:hover,
+.headerLiCentr:hover,
+.headerLiZakazi:hover {
   color: #FF6879 !important;
 }
 
@@ -83,7 +89,7 @@ p {
   font-weight: 700;
   font-size: 48px;
   color: #ffffff !important;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .enterReg {
@@ -91,7 +97,7 @@ p {
 }
 
 .enterBtn {
-  width: 100px;
+  width: 80px !important;
   background-color: #FF909D;
   border-color: #FF909D;
   color: #ffffff;
@@ -103,7 +109,7 @@ p {
 }
 
 .regBtn {
-  width: 200px;
+  width: 120px !important;
   background-color: #FF909D;
   border-color: #FF909D;
   color: #ffffff;
@@ -453,11 +459,13 @@ li {
   margin-right: 20px;
 }
 
-.form-label, .modal-title {
+.form-label,
+.modal-title {
   color: #75C9CC;
 }
 
-.modalBtn, .footerModalBtn {
+.modalBtn,
+.footerModalBtn {
   width: 200px;
   background-color: #FF909D !important;
   border-color: #FF909D !important;
@@ -465,7 +473,8 @@ li {
   margin-bottom: 20px;
 }
 
-.modalBtn:hover, .footerModalBtn:hover {
+.modalBtn:hover,
+.footerModalBtn:hover {
   background-color: #FF6879 !important;
   border-color: #FF6879 !important;
 
@@ -475,3 +484,214 @@ li {
   margin-bottom: 20px;
 }
 
+
+.modal-content {
+  position: absolute;
+  top: 250px;
+}
+
+
+
+
+
+
+
+/* //////////////////////////////// ПЛАНШЕТНАЯ ВЕРСИЯ //////////////////////////////////// */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    display: flex !important;
+    flex-direction: column !important;
+    max-height: 100px;
+    justify-content: center !important;
+  }
+
+  .logo {
+    display: flex !important;
+    margin-left: 50px;
+    font-size: 28px;
+  }
+
+  .enterReg {
+    display: flex !important;
+    justify-content: center;
+    margin-right: 50px;
+  }
+
+  .headerLiCentr {
+    margin: 0;
+    padding: 0 30px 0 30px !important;
+  }
+
+  .enterBtn {
+    width: 70px !important;
+    align-items: center !important;
+  }
+
+  .regBtn {
+    width: 120px !important;
+    align-items: center !important;
+  }
+
+  .articleBtn1024 {
+    margin-bottom: 50px;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    margin-bottom: 0px;
+  }
+
+  .articleBlock {
+    margin-bottom: 0;
+  }
+
+  .aboutImg,
+  .aboutPhoto {
+    width: 400px;
+    height: 380px;
+  }
+
+  .aboutTextBody {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 50px;
+  }
+
+  .text-start {
+    padding: 0;
+    margin-bottom: 140px;
+  }
+
+  .containerFooter {
+    padding: 40px 50px 10px 50px;
+
+  }
+
+  .buttonUp {
+    right: 80px;
+  }
+
+  .catalogSlideBlock {
+    margin-bottom: 0;
+  }
+
+  .catalog {
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* //////////////////////////////// МОБИЛЬНАЯ ВЕРСИЯ //////////////////////////////////// */
+
+@media (max-width: 767px) {
+  .header {
+    display: flex !important;
+    flex-direction: row !important;
+    max-height: 140px;
+    justify-content: center !important;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex !important;
+    margin-left: 10px;
+    margin-bottom: 0px !important;
+    font-size: 24px;
+  }
+
+  .headerLi, .headerLiCentr, .headerLiRight {
+    font-size: 22px;
+  }
+
+  .enterReg {
+    display: flex !important;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  .headerLiCentr {
+    margin: 0;
+    padding: 0 30px 0 30px !important;
+  }
+
+  .enterBtn {
+    width: 70px !important;
+    align-items: center !important;
+  }
+
+  .regBtn {
+    width: 120px !important;
+    align-items: center !important;
+  }
+
+  .articleBtn1024 {
+    margin-bottom: 120px;
+  }
+
+  .artBtn {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .control-next {
+    height: 400px;
+  }
+
+  .active {
+    margin-bottom: 0;
+  }
+
+  .carousel-inner,
+  .carousel-item {
+    margin-bottom: 0px;
+  }
+
+  .articleBlock {
+    margin-bottom: 0;
+  }
+
+  .aboutImg,
+  .aboutPhoto {
+    width: 400px;
+    height: 380px;
+  }
+
+  .aboutTextBody {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 50px;
+  }
+
+  .text-start {
+    padding: 0;
+    margin-bottom: 140px;
+  }
+
+  .containerFooter {
+    padding: 40px 50px 10px 50px;
+
+  }
+
+  .buttonUp {
+    right: 80px;
+  }
+
+  .catalogSlideBlock {
+    margin-bottom: 0;
+  }
+
+  .catalog {
+    margin-bottom: 0;
+  }
+
+}
