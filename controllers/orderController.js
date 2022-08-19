@@ -29,10 +29,8 @@ exports.newOrder = async (req, res) => { // multer создает req.file
     // res.json();
     const message = {
       to: req.body.email,
-      subject: 'Your order',
-      text: `Здравствуйте, ${req.body.name} . Мы получили ваш заказ. 
-    ${req.body.description}
-    Часы будут готовы в течение 2 недель. При готовности с вами свяжутся`,
+      subject: 'Информация по Вашему заказу на Sciroco.ru',
+      text: `Здравствуйте, ${req.body.name}. Мы получили Ваш заказ. Стандартный срок изготовления часов - три недели, однако каждый заказ индивидуален и, соответственно, сроки могут отличаться. По мере выполнения Вашего заказы, мы будем связываться с Вами по указанным Вами контактам.`,
     };
     mailer(message);
     setTimeout(() => {
@@ -42,3 +40,5 @@ exports.newOrder = async (req, res) => { // multer создает req.file
     res.send(error.message);
   }
 };
+
+// ${req.body.description}

@@ -126,7 +126,7 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
                 <div className="col-md-4 col-6 footerContacts">
                   <h4 className="footerTitle">Контакты</h4>
                   <ul className="list-unstyled">
-                    <li className="footerContactsLi"> тел: +7 (800)-777-77-77</li>
+                    <li className="footerContactsLi"> <a href="tel:+79280002233" className="footerContactsLiCall">тел: +7 (928)-000-22-33</a></li>
                     <li className="footerContactsLi"> тел: +7 (495)-777-77-77</li>
                     <li><a href="mailto:vlad@htmlbook.ru" className="email">email: hello@sciroco.ru</a></li>
                   </ul>
