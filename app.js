@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const path = require('path');
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const session = require('express-session');
 const FileStore = require('session-file-store')(session);
 
@@ -22,7 +22,7 @@ const ordersPageRouter = require('./routes/ordersPageRouter');
 
 const app = express();
 
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 // app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.resolve('public')));
 app.use(express.json());
