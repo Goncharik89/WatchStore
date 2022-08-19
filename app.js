@@ -23,7 +23,7 @@ const ordersPageRouter = require('./routes/ordersPageRouter');
 const app = express();
 
 // app.use(morgan('dev'));
-// app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.resolve('public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
