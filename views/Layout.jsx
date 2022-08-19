@@ -74,7 +74,7 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
                   <input name="email" type="email" className="form-control" id="exampleInput1" />
                   <label htmlFor="exampleInput2" className="form-label">Пароль</label>
 
-                  <input name="password" type="text" className="form-control" id="exampleInput2" />
+                  <input name="password" type="password" className="form-control" id="exampleInput2" />
                   <button type="submit" className="btn btn-primary modalBtn">Войти</button>
 
                 </form>
@@ -97,7 +97,7 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
                   <input name="email" type="email" className="form-control" />
                   <label htmlFor="exampleInput2" className="form-label">Пароль</label>
 
-                  <input name="password" type="text" className="form-control" />
+                  <input name="password" type="password" className="form-control" />
                   <button type="submit" className="btn btn-primary modalBtn">Зарегистрироваться</button>
 
                 </form>

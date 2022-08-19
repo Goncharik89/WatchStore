@@ -14,4 +14,14 @@ const renderOrdersPage = async (req, res) => {
   }
 };
 
-module.exports = renderOrdersPage;
+const deleteOrder = async (req, res) => {
+  try {
+    const { id } = req.body;
+    await Order.destroy({ where: { id } });
+    res.sendStatus(200);
+  } catch (error) {
+    res.status(500).json({ errorMessage: error.message });
+  }
+};
+
+module.exports = { renderOrdersPage, deleteOrder };

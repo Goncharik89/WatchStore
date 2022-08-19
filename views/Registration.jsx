@@ -11,9 +11,9 @@ module.exports = function Registration() {
         <label htmlFor="exampleInput1" className="form-label">Имя</label>
         <input name="name" type="text" className="form-control" />
         <label htmlFor="exampleInput1" className="form-label">Адрес электронной почты</label>
-        <input name="email" type="text" className="form-control" />
+        <input name="email" type="email" className="form-control" />
         <label htmlFor="exampleInput2" className="form-label">Пароль</label>
-        <input name="password" type="text" className="form-control" />
+        <input name="password" type="password" className="form-control" />
         <button type="submit" className="btn btn-primary">Отправить</button>
       </form>
       <hr />

@@ -114,6 +114,18 @@ p {
   border-color: #FF6879;
 }
 
+.orderBtn {
+  width: 70px;
+  background-color: #FF909D;
+  border-color: #FF909D;
+  color: #ffffff;
+}
+
+.orderBtn:hover {
+  background-color: #FF6879;
+  border-color: #FF6879;
+}
+
 .enterBtn {
   width: 100px;
   background-color: #FF909D !important;
