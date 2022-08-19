@@ -37,7 +37,10 @@ exports.newOrder = async (req, res) => { // multer создает req.file
       res.redirect('/');
     }, 3000);
   } catch (error) {
-    res.send(error.message);
+    setTimeout(() => {
+      res.redirect('/');
+    }, 10000);
+    // res.send(error.message);
   }
 };
 

@@ -12,7 +12,7 @@ module.exports = function Home({ newUser, newUserRole }) {
       <Article />
       <About />
       <Catalog />
-      <Order />
+      <Order newUser={newUser} />
 
     </Layout>
   );
