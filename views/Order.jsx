@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Order({ userId }) {
+function Order({ userId, newUser }) {
   return (
 
     <>
@@ -12,9 +12,23 @@ function Order({ userId }) {
               <h5 className="modal-title" id="exampleModalLabel">Статус заказа</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Закрыть" />
             </div>
-            <div className="modal-body">
-              Спасибо за заявку, Ваш заказ принят!
-            </div>
+
+            {newUser ? (
+              <div className="modal-body">Спасибо за заявку, Ваш заказ принят!</div>
+
+            ) : (
+              <div className="modal-body">
+                Пожалуйста,
+                {' '}
+                <a data-bs-dismiss="modal" data-bs-toggle="modal" href="/#staticBackdrop">войдите</a>
+                {' '}
+                или
+                {' '}
+                <a data-bs-dismiss="modal" data-bs-toggle="modal" href="/#Backdrop">зарегистрируйтесь</a>
+                .
+              </div>
+            )}
+
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary footerModalBtn" data-bs-dismiss="modal">OK</button>
               {/* <button type="button" className="btn btn-primary">Сохранить изменения</button> */}

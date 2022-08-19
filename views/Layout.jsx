@@ -32,9 +32,9 @@ module.exports = function Layout({ children, newUser, newUserRole }) {
         <a href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none logo">Scirocco</a>
 
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 centrMenu" id="navBarMenu">
-          <li><a href="#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
-          <li><a href="#catalog" className="nav-link px-2 link-dark headerLiCentr">Каталог</a></li>
-          <li><a href="#order" className="nav-link px-2 link-dark headerLiRight">Заказать</a></li>
+          <li><a href="/#about" className="nav-link px-2 link-dark headerLi">Обо мне</a></li>
+          <li><a href="/#catalog" className="nav-link px-2 link-dark headerLiCentr">Каталог</a></li>
+          <li><a href="/#order" className="nav-link px-2 link-dark headerLiRight">Заказать</a></li>
         </ul>
         {newUserRole ? (
           <div><a href="/orders" className="nav-link px-2 link-dark headerLiZakazi">Заказы</a></div>
