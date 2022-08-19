@@ -10,7 +10,7 @@ module.exports = function OrderItem({ order }) {
       <td>{order.phone}</td>
       <td>{order.description}</td>
       <td><img src={`/images/${order.pic}`} alt="pic" style={{ width: 300 }} /></td>
-
+      <td><button type="button" id={order.id}>Удалить</button></td>
     </tr>
   );
 };
